@@ -7,6 +7,6 @@ Download the files, connect the pins of your ISP to the keyboard, I used a USBas
 The next step will be to flash the hex file. To flash th Atmel chip with the ISP using a USBasp clone use this command:
 
 ```bash
-avrdude -c usbasp-clone -p atmega32u4 -F -e -U flash:w:mass_bootloader_tada68.hex
+avrdude -c usbasp-clone -B 100 -p atmega32u4 -F -e -U flash:w:mass_bootloader_tada68.hex
 ```
 Then disconnect the ISP and connect the keyboard via USB. Then put it in to mass storage mode and drag the .BIN file to the keyboard and press ESC. DO NOT PRESS EJECT ON YOUR COMPUTER. If you press eject you will need to reflash the keyboard again using the ISP.
